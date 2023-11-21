@@ -5,7 +5,6 @@ Main mechanic: 1) 3D printer 2) Quantum Computer;
 
 TODO:
 
-
 - Terrain:
 
   - create map of grass with occasional rocks
