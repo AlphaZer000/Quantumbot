@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://562jiljdhc0"]
+
+[ext_resource type="Texture2D" uid="uid://oi786v02av2c" path="res://placeholders/placeholdertiles.png" id="1_uup4v"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mu472"]
+texture = ExtResource("1_uup4v")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_uwktt"]
+tile_size = Vector2i(8, 8)
+sources/0 = SubResource("TileSetAtlasSource_mu472")
+
+[node name="TileMap" type="TileMap"]
+texture_filter = 1
+tile_set = SubResource("TileSet_uwktt")
+cell_quadrant_size = 8
+format = 2

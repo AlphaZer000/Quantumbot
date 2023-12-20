@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpsptie6xhhy5"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_chlby"]
+[ext_resource type="Texture2D" uid="uid://dixpgy1xylbjn" path="res://placeholders/placeholder1.png" id="2_y05d3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p03f8"]
+size = Vector2(4, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hl88a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y05d3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="CharacterBody2D"]
+script = ExtResource("1_chlby")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_p03f8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_hl88a")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
